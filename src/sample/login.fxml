@@ -18,6 +18,7 @@
             <ImageView fitHeight="128.0" fitWidth="133.0" layoutX="85.0" layoutY="49.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../img/school.png" />
+
                </image>
             </ImageView>
             <Label layoutX="61.0" layoutY="188.0" text="School Managemant System" textFill="#831515">
