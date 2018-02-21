@@ -60,4 +60,3 @@
       <Label fx:id="loginStatus" layoutX="318.0" layoutY="26.0" prefHeight="17.0" prefWidth="261.0" textFill="#e41111" />
    </children>
 </AnchorPane>
-//

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Admin.adminController">
+    <children>
+        <TabPane prefHeight="400.0" prefWidth="700.0" tabClosingPolicy="UNAVAILABLE">
+            <tabs>
+                <Tab text="Student Data">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="400.0" prefWidth="567.0" style="-fx-background-color: #822525;">
+                            <children>
+                                <TableView fx:id="studentTable" layoutX="194.0" layoutY="53.0" prefHeight="294.0" prefWidth="479.0">
+                                    <columns>
+                                        <TableColumn fx:id="idcolum" prefWidth="39.0" text="ID" />
+                                        <TableColumn fx:id="firstnamecolum" prefWidth="102.0" text="Firstname" />
+                                        <TableColumn fx:id="lastnamecolum" prefWidth="102.0" text="Lastname" />
+                                        <TableColumn fx:id="emailcolum" prefWidth="152.0" text="Email" />
+                                        <TableColumn fx:id="dobcolum" prefWidth="83.0" text="Date of Birth" />
+                                    </columns>
+                                </TableView>
+                                <JFXButton fx:id="btnLoad" layoutX="593.0" layoutY="14.0" onAction="#loadStudentData" ripplerFill="#e80808" style="-fx-background-color: #ffffff;" text="Load Data">
+                                    <font>
+                                        <Font name="System Bold" size="13.0" />
+                                    </font>
+                                </JFXButton>
+                                <TextField fx:id="searchTxt" layoutX="333.0" layoutY="14.0" prefHeight="25.0" prefWidth="246.0" promptText="Search">
+                                    <font>
+                                        <Font size="13.0" />
+                                    </font>
+                           <effect>
+                              <Lighting>
+                                 <bumpInput>
+                                    <Shadow />
+                                 </bumpInput>
+                                 <light>
+                                    <Light.Distant />
+                                 </light>
+                              </Lighting>
+                           </effect>
+                                </TextField>
+                        <TextField fx:id="idTxt" layoutX="31.0" layoutY="53.0" promptText="ID" />
+                        <TextField fx:id="firstTxt" layoutX="31.0" layoutY="86.0" prefHeight="0.0" prefWidth="149.0" promptText="firstname" />
+                        <TextField fx:id="lastTxt" layoutX="31.0" layoutY="119.0" prefHeight="0.0" prefWidth="149.0" promptText="lastname" />
+                        <TextField fx:id="emailTxt" layoutX="31.0" layoutY="152.0" prefHeight="0.0" prefWidth="149.0" promptText="email" />
+                        <DatePicker fx:id="dateTxt" layoutX="30.0" layoutY="186.0" prefHeight="25.0" prefWidth="152.0" promptText="date of brith" />
+                        <JFXButton fx:id="addbtn" layoutX="97.0" layoutY="233.0" style="-fx-background-color: #ffffff;" text="Add Student" />
+                        <JFXButton fx:id="editbtn" layoutX="141.0" layoutY="266.0" style="-fx-background-color: #ffffff;" text="Edit" />
+                        <JFXButton fx:id="deletebtn" layoutX="128.0" layoutY="299.0" style="-fx-background-color: #ffffff;" text="Delete" />
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab text="Help?">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #212121;" />
+                    </content>
+                </Tab>
+            </tabs>
+        </TabPane>
+    </children>
+</AnchorPane>
